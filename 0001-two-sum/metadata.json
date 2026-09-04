@@ -1,0 +1,21 @@
+{
+  "description": "You are given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.\n\nYou may assume that each input would have ***exactly* one solution**, and you may not use the *same* element twice.\n\nYou can return the answer in any order.\n\nExample 1:\n\n```\n\n**Input:** nums = [2,7,11,15], target = 9\n**Output:** [0,1]\n**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1].\n\n```\n\nExample 2:\n\n```\n\n**Input:** nums = [3,2,4], target = 6\n**Output:** [1,2]\n\n```\n\nExample 3:\n\n```\n\n**Input:** nums = [3,3], target = 6\n**Output:** [0,1]\n\n```\n\n**Constraints:**\n\n- `2 <= nums.length <= 10^4`\n\n- `-10^9 <= nums[i] <= 10^9`\n\n- `-10^9 <= target <= 10^9`\n\n- **Only one valid answer exists.**\n\n**Follow-up: **Can you come up with an algorithm that is less than `O(n^2)` time complexity?",
+  "difficulty": "Easy",
+  "language": "java",
+  "leetCodeUrl": "https://leetcode.com/problems/two-sum/",
+  "memory": "47 MB",
+  "problemId": 1,
+  "runtime": "45 ms",
+  "slug": "two-sum",
+  "sourceCode": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        for(int i=0;i<nums.length;i++)\n        {\n            for(int j=i+1;j<nums.length;j++)\n            {\n                if(nums[i]+nums[j]==target)\n                {\n                    return new int[]{i,j};\n                }\n            }\n        }return new int[]{};\n    }\n}",
+  "submittedAt": "2026-09-04T18:20:23.108Z",
+  "testCases": "Case 1:\nStatus: Passed\nInput:\nnums = [2,7,11,15]\ntarget = 9\nOutput = [0,1]\nExpected = [0,1]\n\nCase 2:\nStatus: Passed\nInput:\nnums = [3,2,4]\ntarget = 6\nOutput = [1,2]\nExpected = [1,2]\n\nCase 3:\nStatus: Passed\nInput:\nnums = [3,3]\ntarget = 6\nOutput = [0,1]\nExpected = [0,1]",
+  "title": "Two Sum",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "submissionDate": "2026-09-04T18:20:23.108Z",
+  "folderName": "0001-two-sum",
+  "githubUrl": "https://github.com/joshikareddygoduguchintha-maker/leetcode-vault/blob/main/0001-two-sum/solution.java"
+}
